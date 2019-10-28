@@ -21,11 +21,11 @@ namespace Azure.Storage.Blobs.PerfStress
             var blobClientOptions = new BlobClientOptions()
             {
                 Transport = PerfStressTransport.Create(options),
-                //Diagnostics =
-                //{
-                //    IsLoggingEnabled = false,
-                //    IsDistributedTracingEnabled = false
-                //}
+                Diagnostics =
+                {
+                    IsLoggingEnabled = false,
+                    IsDistributedTracingEnabled = false
+                }
             };
 
             BlobServiceClient = new BlobServiceClient(connectionString, blobClientOptions);
